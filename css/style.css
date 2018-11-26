@@ -1,0 +1,162 @@
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+@font-face {
+  font-family: "Myriad-Pro-Bold";
+  src: url("../fonts/Myriad-Pro-Bold.otf") format("OpenType");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Montseratt-Ultra-Light";
+  src: url("../fonts/Montserrat-UltraLight.otf") format("OpenType");
+  font-style: normal;
+}
+* {box-sizing: border-box}
+body {
+    margin: 0;
+    background-color: gray;
+}
+header {
+    min-height: 30px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+form {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+  input, button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  input {
+    width: 100%;
+    height: 50px;
+    background: #F9F0DA;
+    padding-left: 15px;
+    font-size: 24px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  button {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: #F15B42;
+    cursor: pointer;
+  }
+  button:before {
+    content: ">";
+    color: #F9F0DA;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 530px;
+    width: 100%;
+  }
+  .page {
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 100%;
+    animation-name: left-right;
+    animation-duration: 3s;
+  }
+  .component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start ;
+    align-items: center;
+    width: 320px;
+    height: 450px;
+    background-color:#F15B42;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .component h1 {
+    font-size: 20px;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 10px;
+  }
+  p.description {
+  width: 240px;
+  height: 210px;
+  font-family: "Montseratt-Ultra-Light";
+  }
+  .screenshot-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 320px;
+    height: 180px;
+  }
+  .screenshot-title img {
+    position: relative;
+  }
+  .screenshot-title a {
+    position: absolute;
+    text-align: center;
+    color:whitesmoke;
+    width: 248px;
+    height: 70px;
+    top: 30px;
+  }
+  .screenshot-title a>h1 {
+    text-overflow: ellipsis;
+    margin-top:0;
+    margin-bottom: 0;
+  }
+  p {
+    text-align: center;
+  }
+.author,
+.publication-date,
+.view-count,
+.desctiption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Myriad-Pro-Bold';
+}
+.information p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.total-amount {
+  min-height: 10px;
+  width: 100%;
+  min-width: 150px;
+  text-align: center;
+  position:fixed;
+  top: 590px;
+}
+@keyframes left-right {
+  from{position:absolute; left:100%;}
+  to{position:absolute; left: 0%;}
+}
+@keyframes right-left {
+  from{position: absolute; right:100%;}
+  to{position: absolute; right: 0%}
+}
